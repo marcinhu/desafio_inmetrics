@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "f8f44975-932e-4994-89bd-6c661a159c12",
+		"name": "Desafio_WebService",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teste_Get",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a0888610-52ae-4741-a492-26ba989e5881",
+						"exec": [
+							"pm.test(\"Response code é 200\"), function() {\r",
+							"    pm.Response.to.have.status(200);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users?page=2",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Teste_Post",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "f561ae40-e8df-4e3c-a0e6-6fe083df715e",
+						"exec": [
+							"pm.test(\"Response code é 201\"), function() {\r",
+							"    pm.Response.to.have.status(201);\r",
+							"}"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
